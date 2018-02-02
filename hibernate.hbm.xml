@@ -84,3 +84,48 @@
 		 
 	</class>	
 </hibernate-mapping>
+
+附上实例模板：
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class
+            name="ch04.apple"
+            table="apple"
+    >
+        <id
+                name="id"
+                column="id"
+                type="java.lang.String"
+                length="32"
+        >
+            <generator class="uuid"></generator>
+        </id>
+        <property name="color"
+                  type="java.lang.String"
+                  update="true"
+                  insert="true"
+                  column="color"
+                  length="50"
+                  not-null="false"
+        />
+        <property name="size"
+                  type="java.lang.Float"
+                  update="true"
+                  insert="true"
+                  column="size"
+                  not-null="false"
+        />
+        <property name="weight"
+                  type="java.lang.Float"
+                  update="true"
+                  insert="true"
+                  column="weight"
+                  not-null="false"
+        />
+
+    </class>
+
+</hibernate-mapping>
