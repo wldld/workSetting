@@ -1,0 +1,4 @@
+String driver = "com.mysql.jdbc.Driver";
+String url = "jdbc:mysql://localhost:3306/wallpaper?useSSL=false";
+String username;
+String password;
