@@ -21,6 +21,12 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.43</version>
     </dependency>
+<!-- https://mvnrepository.com/artifact/org.jooq/jooq -->
+    <dependency>
+      <groupId>org.jooq</groupId>
+      <artifactId>jooq</artifactId>
+      <version>3.9.5</version>
+    </dependency>
   </dependencies>
   <build>
   <!--指定编译器版本 -->
