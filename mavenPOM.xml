@@ -23,10 +23,20 @@
     </dependency>
 <!-- https://mvnrepository.com/artifact/org.jooq/jooq -->
     <dependency>
-      <groupId>org.jooq</groupId>
-      <artifactId>jooq</artifactId>
-      <version>3.9.5</version>
-    </dependency>
+     <groupId>org.jooq</groupId>
+     <artifactId>jooq</artifactId>
+     <version>3.9.5</version>
+   </dependency>
+    <dependency>
+    <groupId>org.jooq</groupId>
+    <artifactId>jooq-meta</artifactId>
+    <version>3.9.5</version>
+  </dependency>
+  <dependency>
+    <groupId>org.jooq</groupId>
+    <artifactId>jooq-codegen</artifactId>
+    <version>3.9.5</version>
+  </dependency>
   </dependencies>
   <build>
   <!--指定编译器版本 -->
