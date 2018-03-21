@@ -27,7 +27,8 @@
        <artifactId>hibernate-core</artifactId>
        <version>5.2.6.Final</version>
   </dependency>
-<!-- https://mvnrepository.com/artifact/org.jooq/jooq -->
+     <!--/hibernate依赖包 -->
+	<!--jooq依赖包 -->
     <dependency>
      <groupId>org.jooq</groupId>
      <artifactId>jooq</artifactId>
@@ -43,6 +44,10 @@
     <artifactId>jooq-codegen</artifactId>
     <version>3.9.5</version>
   </dependency>
+	<!--springMVC依赖包 -->
+	  
+	<!--/springMVC依赖包 -->
+	<!--/jooq依赖包 -->
   </dependencies>
   <build>
   <!--指定编译器版本 -->
