@@ -84,6 +84,65 @@
                   <target>1.8</target>
               </configuration>
           </plugin>
+	      
+	  <!--jooq code generator -->
+          <plugin>
+              <groupId>org.jooq</groupId>
+              <artifactId>jooq-codegen-maven</artifactId>
+              <version>3.9.6</version>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>generate</goal>
+                      </goals>
+                  </execution>
+              </executions>
+              <dependencies>
+                  <dependency>
+                      <groupId>mysql</groupId>
+                      <artifactId>mysql-connector-java</artifactId>
+                      <version>5.1.43</version>
+                  </dependency>
+              </dependencies>
+              <configuration>
+                  <jdbc>
+                      <driver>com.mysql.jdbc.Driver</driver>
+                      <user>root</user>
+                      <url>jdbc:mysql://localhost:3306/blog</url>
+                      <password>123456</password>
+                  </jdbc>
+
+                  <generator>
+                      <database>
+                          <name>org.jooq.util.mysql.MySQLDatabase</name>
+                          <includes>.*</includes>
+                          <excludes></excludes>
+                          <!--数据库名称 -->
+                          <inputSchema>blog</inputSchema>
+                      </database>
+
+                      <generate>
+                          <!--生成dao和pojo-->
+                          <daos>true</daos>
+                          <pojos>true</pojos>
+                          <!--把数据库时间类型映射到java 8时间类型-->
+                          <javaTimeTypes>true</javaTimeTypes>
+                          <!--<interfaces>true</interfaces>-->
+                          <!--不在生成的代码中添加spring注释，比如@Repository-->
+                          <springAnnotations>false</springAnnotations>
+                      </generate>
+
+                      <target>
+                          <!--生成代码文件的包名及放置目录-->
+                          <packageName>com.xy.pojo</packageName>
+                          <directory>src/main/java</directory>
+                      </target>
+
+                  </generator>
+              </configuration>
+          </plugin>
+	<!--jooq code generator -->    
+	      
       </plugins>
 	  
     <finalName>HardWork</finalName>
